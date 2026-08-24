@@ -1,15 +1,96 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# ── Gradle ────────────────────────────────────────────────────────────────────
+.gradle/
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+build/
+**/build/
+
+# ── Local config (never commit) ───────────────────────────────────────────────
 local.properties
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+
+# ── Android Studio / IntelliJ IDEA ────────────────────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/.gitignore
+.idea/deploymentTargetDropDown.xml
+.idea/migrations.xml
+.idea/androidTestResultsUserPreferences.xml
+captures/
+
+# ── Kotlin / Java build outputs ───────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.aar
+*.ap_
+*.dex
+
+# ── Native build ──────────────────────────────────────────────────────────────
+.externalNativeBuild/
+.cxx/
+*.so
+obj/
+
+# ── Generated sources ─────────────────────────────────────────────────────────
+# KSP / KAPT generated code is reproducible — do not commit
+**/generated/
+**/ksp/
+**/kapt/
+
+# ── Room schema exports (optional — remove if you want to track migrations) ───
+# app/schemas/
+
+# ── Profiling & test outputs ──────────────────────────────────────────────────
+*.hprof
+*.trace
+/test-results/
+/lint-results*
+/lint.xml
+
+# ── OS generated ──────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Secrets & credentials (safety net) ───────────────────────────────────────
+*.env
+.env
+.env.*
+google-services.json
+GoogleService-Info.plist
+agconnect-services.json
+secrets.xml
+**/res/values/secrets.xml
+
+# ── Firebase / Google ─────────────────────────────────────────────────────────
+# google-services.json is listed above — keep it out of VCS,
+# use CI environment variables or a secrets manager instead.
+
+# ── Signing configs ───────────────────────────────────────────────────────────
+release/
+signing/
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.orig
+*.bak
+*.swp
+*~
